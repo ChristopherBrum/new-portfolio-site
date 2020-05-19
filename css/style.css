@@ -104,7 +104,7 @@ h3 {
 /* Body Styling */
 
 .main {
-  transition: left .5s;
+  transition: margin-left .5s;
   margin-left: 275px;
 }
 
@@ -127,6 +127,7 @@ h3 {
   position: fixed;
   height: 100%;
   width: 275px;
+  transition: width .5s;
   padding: 1.5em;
   overflow-x: hidden;
 }
