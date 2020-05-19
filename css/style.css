@@ -101,6 +101,20 @@ h3 {
   margin-left: 8em;
 }
 
+/* Body Styling */
+
+.main {
+  transition: left .5s;
+  margin-left: 275px;
+}
+
+.intro {
+  color: var(--clr-light);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
   /* Navigation */
 
 .nav {
@@ -178,21 +192,26 @@ h3 {
   padding-bottom: .6em;
 }
 
-/* Nav Open */
+/* Nav Closed */
 
 .nav__close-btn {
   position: absolute;
   top: 1.5em;
   right: 1.5em;
   color: var(--clr-light);
-  background: var(--clr-dark);
   text-decoration: none;
 }
 
-/* Nav Closed */
-
 .nav--toggle {
   width: 50px;
+}
+
+.main--toggle {
+  margin-left: 50px;
+}
+
+.nav__close-btn--toggle {
+  color: var(--clr-dark);
 }
 
 .nav__list--toggle {
@@ -208,17 +227,5 @@ h3 {
   margin-left: -1.5em;
 }
 
-/* Body Styling */
 
-.main {
-  transition: margin-left .5s;
-}
-
-.intro {
-  color: var(--clr-light);
-  height: 100vh;
-  margin-left: 275px;
-  display: flex;
-  justify-content: center;
-}
 
