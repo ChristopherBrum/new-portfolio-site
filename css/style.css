@@ -9,27 +9,30 @@ body {
 }
 
 :root {
---clr-accent: #FF7F11;
-/* DD7230; */
-/* FFA552; */
-/* F9A03F; */
-/* F77F00; */
-/* D58936;  */
+--clr-acc-orange1: #F78764;
+--clr-acc-orange2: #FCB07E;
+--clr-acc-dark: #093A3E;
 --clr-light: #EBF5DF;
 --clr-dark: #1C1C1C;
 
 --ff-reg: 'Oswald', sans-serif;
+--ff-title: 'Shrikhand', cursive;
 
 --fw-light: 200;
 --fw-reg: 400;
 --fw-bold: 700;
 
---fs-h1: 2.5rem;
---fs-h2: 2.25rem;
+--fs-h1: 2.25rem;
+--fs-h2: 2rem;
 --fs-h3: 1.25rem;
 --fs-body: 1rem;
 
---bs: 0.375em 0.375em 1em rgba(0,0,0,.35),
+--bs-heavy: 
+0.375em 0.375em 1em rgba(0,0,0,.35),
+0.25em 0.25em 0.75em rgba(0,0,0,.25),
+0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+--bs-light: 
 0.25em 0.25em 0.75em rgba(0,0,0,.25),
 0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
@@ -45,7 +48,7 @@ h1, p, ul {
 
 h1 {
   font-size: var(--fs-h1);
-  font-weight: var(--fw-light);
+  font-weight: var(--fw-reg);
 }
 
 h2 {
@@ -59,13 +62,36 @@ h3 {
 .intro__title {
   line-height: 1em;
   margin: auto 0;
+  color: var(--clr-dark);
+  letter-spacing: .3em;
+}
+
+.intro__title-opening {
+  line-height: 2.2em; 
+  margin-left: 2em;
 }
 
 .intro__title-name {
-  text-transform: uppercase;
+  text-shadow: var(--bs-light);
+  letter-spacing: .05em;
+  line-height: .75em;
+  margin-left: -.25em;
+  color: var(--clr-light);
+  /* text-transform: uppercase; */
+  font-family: var(--ff-title);
+}
+
+.intro__title-first {
   font-size: 3em;
-  font-weight: var(--fw-reg);
-  text-shadow: var(--bs);
+}
+
+.intro__title-last {
+  font-size: 5em;
+  margin-left: 1.3em;
+}
+
+.intro__title-dev {
+  margin-left: 8em;
 }
 
   /* Navigation */
@@ -88,7 +114,7 @@ h3 {
   width: 170px;
   margin: 0 auto;
   border-radius: 50%;
-  box-shadow: var(--bs);
+  box-shadow: var(--bs-heavy);
 }
 
 .nav__list {
@@ -98,7 +124,6 @@ h3 {
 
 .nav__item {
   font-weight: var(--fw-light);
-  /* text-transform: uppercase; */
 }
 
 .nav__item-link {
@@ -113,7 +138,7 @@ h3 {
 
 .nav__item-link:hover,
 .nav__item-link:focus {
-  color: var(--clr-accent);
+  color: var(--clr-acc-orange2);
 }
 
 .nav__social-link {
@@ -123,7 +148,7 @@ h3 {
 
 .nav__social-link:hover,
 .nav__social-link:focus {
-  color: var(--clr-accent);
+  color: var(--clr-acc-orange2);
   opacity: .75;
 }
 
@@ -142,7 +167,7 @@ h3 {
   background:
     linear-gradient(
       to top left, 
-      #FE5E41, #FF7F11
+      var(--clr-acc-orange1), var(--clr-acc-orange2)
     );
   color: var(--clr-light);
   height: 100vh;
