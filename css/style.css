@@ -191,7 +191,22 @@ h3 {
 
 /* Nav Closed */
 
+.nav--toggle {
+  width: 50px;
+}
 
+.nav__list--toggle {
+  display: none;
+}
+
+.nav__headshot--toggle {
+  display: none;
+}
+
+.nav__social-list--toggle {
+  flex-direction: column;
+  margin-left: -1.5em;
+}
 
 /* Body Styling */
 
