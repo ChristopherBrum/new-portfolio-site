@@ -13,13 +13,14 @@
 
     <!-- Navigation  -->
     <nav class="nav">
+      <a href="javascript:void(0)" class="nav__close-btn" onclick="closeNav()" >X</a>
       <ul class="nav__list">
-        <a href="#" class="nav__item-link"><li class="nav__item" >Home</li></a>
-        <a href="#" class="nav__item-link"><li class="nav__item">Ideas</li></a>
-        <a href="#" class="nav__item-link"><li class="nav__item">My Work</li></a>
-        <a href="#" class="nav__item-link"><li class="nav__item">Thoughts</li></a>
-        <a href="#" class="nav__item-link"><li class="nav__item">Who am I?</li></a>
-        <a href="#" class="nav__item-link"><li class="nav__item">Contact</li></a>
+        <li class="nav__item"><a href="#" class="nav__item-link">Home</li><a></li>
+        <li class="nav__item"><a href="#" class="nav__item-link">Ideas</li><a></li>
+        <li class="nav__item"><a href="#" class="nav__item-link">My Work</li><a></li>
+        <li class="nav__item"><a href="#" class="nav__item-link">Thoughts</li><a></li>
+        <li class="nav__item"><a href="#" class="nav__item-link">Who am I?</li><a></li>
+        <li class="nav__item"><a href="#" class="nav__item-link">Contact</li><a></li>
       </ul>
       
       <img src="images/ChrisHeadshotRound.png" alt="chris's headshot" class="nav__headshot">
@@ -42,17 +43,19 @@
   </header>
 
   <!-- Intro/Landing Section -->
-
-  <section class="intro">
-    <h1 class="intro__title">
-      <span class="intro__title-opening">
-        Hi, I'm</span><br>
-      <span class="intro__title intro__title-name intro__title-first">Christopher</span><br>
-      <span class="intro__title intro__title-name intro__title-last">Brum</span><br>
-      <span class="intro__title intro__title-dev">Front End Developer</span</h1>
-  </section>
-
+  <main class="main">
+    <span onclick="openNav()">open</span>
+    <section class="intro">
+      <h1 class="intro__title">
+        <span class="intro__title-opening">
+          Hi, I'm</span><br>
+        <span class="intro__title intro__title-name intro__title-first">Christopher</span><br>
+        <span class="intro__title intro__title-name intro__title-last">Brum</span><br>
+        <span class="intro__title intro__title-dev">Front End Developer</span</h1>
+    </section>
+  </main>
   <footer>
 
   </footer>
+  <script type="text/javascript" src="js/index.js"></script>
 </body>

@@ -6,6 +6,11 @@
 
 body {
   margin: 0;
+  background:
+  linear-gradient(
+    to top left, 
+    var(--clr-acc-orange1), var(--clr-acc-orange2)
+  );
 }
 
 :root {
@@ -64,6 +69,8 @@ h3 {
   margin: auto 0;
   color: var(--clr-dark);
   letter-spacing: .3em;
+  font-size: 2.75vw;
+  margin-left: 1em;
 }
 
 .intro__title-opening {
@@ -77,16 +84,16 @@ h3 {
   line-height: .75em;
   margin-left: -.25em;
   color: var(--clr-light);
-  /* text-transform: uppercase; */
   font-family: var(--ff-title);
 }
 
 .intro__title-first {
-  font-size: 3em;
+  font-size: 8vw;
+  /* 3em */
 }
 
 .intro__title-last {
-  font-size: 5em;
+  font-size: 14vw;
   margin-left: 1.3em;
 }
 
@@ -103,11 +110,16 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
-  height: 100vh;
+  position: fixed;
+  height: 100%;
   width: 275px;
   padding: 1.5em;
   overflow-x: hidden;
+}
+
+.nav__close-btn:hover,
+.nav__close-btn:focus {
+  color: var(--clr-acc-orange2);
 }
 
 .nav__headshot {
@@ -115,6 +127,7 @@ h3 {
   margin: 0 auto;
   border-radius: 50%;
   box-shadow: var(--bs-heavy);
+  display: flex;
 }
 
 .nav__list {
@@ -126,14 +139,18 @@ h3 {
   font-weight: var(--fw-light);
 }
 
+.nav__social-list {
+  display: flex;
+  margin: 0 auto;
+}
+
+.nav__social-item {
+  margin: 0 1em 1em;
+}
+
 .nav__item-link {
   color: var(--clr-light);
   text-decoration: none;
-}
-
-.nav__social-list {
-  display: flex;
-  justify-content: space-around;
 }
 
 .nav__item-link:hover,
@@ -161,14 +178,28 @@ h3 {
   padding-bottom: .6em;
 }
 
-  /* Body Styling */
+/* Nav Open */
+
+.nav__close-btn {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  color: var(--clr-light);
+  background: var(--clr-dark);
+  text-decoration: none;
+}
+
+/* Nav Closed */
+
+
+
+/* Body Styling */
+
+.main {
+  transition: margin-left .5s;
+}
 
 .intro {
-  background:
-    linear-gradient(
-      to top left, 
-      var(--clr-acc-orange1), var(--clr-acc-orange2)
-    );
   color: var(--clr-light);
   height: 100vh;
   margin-left: 275px;
