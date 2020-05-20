@@ -132,10 +132,84 @@ h3 {
   overflow-x: hidden;
 }
 
-.nav__close-btn:hover,
-.nav__close-btn:focus {
+.nav__btn {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  background: transparent;
+  border: 0;
+}
+
+/*  */
+
+.nav__hamburger {
+  display: block;
+  position: relative;
+}
+
+.nav__hamburger,
+.nav__hamburger::before,
+.nav__hamburger::after {
+  background: var(--clr-light);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.nav__hamburger::before,
+.nav__hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.nav__hamburger::before { top: 6px; }
+.nav__hamburger::after { bottom: 6px; }
+
+
+.nav__btn:hover,
+.nav__btn:focus {
   color: var(--clr-acc-orange2);
 }
+
+.nav__btn {
+  padding: .5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
+
+.nav__open .nav {
+  transform: translateX(0);
+}
+
+.nav__open .nav__btn {
+  position: fixed;
+}
+
+.nav__open .nav__hamburger {
+  transform: rotate(.625turn);
+}
+
+.nav__open .nav__hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav__open .nav__hamburger::after {
+  opacity: 0;
+}
+
+.nav__btn:focus {
+  outline: none;
+}
+
+/*  */
 
 .nav__headshot {
   width: 170px;
@@ -195,14 +269,6 @@ h3 {
 
 /* Nav Closed */
 
-.nav__close-btn {
-  position: absolute;
-  top: 1.5em;
-  right: 1.5em;
-  color: var(--clr-light);
-  text-decoration: none;
-}
-
 .nav--toggle {
   width: 50px;
 }
@@ -211,7 +277,7 @@ h3 {
   margin-left: 50px;
 }
 
-.nav__close-btn--toggle {
+.nav__btn--toggle {
   color: var(--clr-dark);
 }
 

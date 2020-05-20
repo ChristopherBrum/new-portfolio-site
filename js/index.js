@@ -12,3 +12,15 @@ const closeNav = () => {
   socialToggle.classList.toggle('nav__social-list--toggle');
 }
 
+const navToggle = document.querySelector('.nav__btn');
+const navLinks = document.querySelectorAll('.nav__item-link');
+
+navToggle.addEventListener("click", () => {
+  document.body.classList.toggle('nav__open');
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    document.body.classList.remove('nav__open');
+  });
+});
