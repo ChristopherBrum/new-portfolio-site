@@ -89,7 +89,6 @@ h3 {
 
 .intro__title-first {
   font-size: 8vw;
-  /* 3em */
 }
 
 .intro__title-last {
@@ -138,9 +137,10 @@ h3 {
   border: 0;
   cursor: pointer;
   position: absolute;
-  right: 1em;
-  top: 2.5em;
+  left: 220px;
+  top: 2.25em;
   z-index: 1000;
+  transition: left 1s;
 }
 
 .nav__hamburger {
@@ -261,6 +261,11 @@ h3 {
 
 .nav--toggle {
   width: 50px;
+}
+
+.nav__btn--toggle {
+  left: 4px;
+  transition: left .5s;
 }
 
 .main--toggle {
