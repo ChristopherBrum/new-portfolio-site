@@ -126,10 +126,10 @@ h3 {
   justify-content: space-between;
   position: fixed;
   height: 100%;
-  width: 275px;
+  width: 280px;
   transition: all .5s ease-in-out;
   padding: 1.5em;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .nav__btn {
@@ -139,7 +139,7 @@ h3 {
   cursor: pointer;
   position: absolute;
   right: 1em;
-  top: 1em;
+  top: 2.5em;
   z-index: 1000;
 }
 
@@ -195,14 +195,14 @@ h3 {
 
 .nav__headshot {
   width: 170px;
-  margin: 0 auto;
   border-radius: 50%;
   box-shadow: var(--bs-heavy);
-  display: flex;
   opacity: 1;
-  transition: all .5s ease;
   position: relative;
-  left: 0;
+  transition: all .5s;
+  transition-delay: .2s;
+  margin: 0 auto; 
+  display: flex;
 }
 
 .nav__list {
@@ -219,13 +219,8 @@ h3 {
 }
 
 .nav__social-list {
-  display: flex;
-  margin: 0 auto;
-}
-
-.nav__social-item {
-  margin: 0 1em 1em;
-  transition: margin .5s;
+  margin-left: 0;
+  transition: margin-left .5s;
 }
 
 .nav__item-link {
@@ -240,7 +235,11 @@ h3 {
 
 .nav__social-link {
   color: var(--clr-light); 
-  font-size: var(--fs-h3)
+  font-size: var(--fs-h3);
+}
+
+.nav__social-item {
+  margin-top: .5em;
 }
 
 .nav__social-link:hover,
@@ -261,16 +260,11 @@ h3 {
 /* Nav Closed */
 
 .nav--toggle {
-  width: 50px;
-  background: transparent;
+  width: 55px;
 }
 
 .main--toggle {
   margin-left: 50px;
-}
-
-.nav__btn--toggle {
-  color: var(--clr-dark);
 }
 
 .nav__list--toggle {
@@ -279,12 +273,11 @@ h3 {
 }
 
 .nav__headshot--toggle {
+  width: 0;
   opacity: 0;
-  left: -100px;
+  transition: all .3s;
 }
 
 .nav__social-list--toggle {
-  flex-direction: column;
-  margin-left: -1.5em;
+  margin-left: -7px;
 }
-
