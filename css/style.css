@@ -260,7 +260,7 @@ h3 {
 /* Nav Closed */
 
 .nav--toggle {
-  width: 55px;
+  width: 50px;
 }
 
 .main--toggle {
@@ -279,5 +279,5 @@ h3 {
 }
 
 .nav__social-list--toggle {
-  margin-left: -7px;
+  margin-left: -9px;
 }
