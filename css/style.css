@@ -26,8 +26,8 @@ body {
 --fw-reg: 400;
 --fw-bold: 700;
 
---fs-h1: 2.25rem;
---fs-h2: 2rem;
+--fs-title: 5rem;
+--fs-large: 3rem;
 --fs-h3: 1.25rem;
 --fs-body: 1rem;
 
@@ -50,13 +50,12 @@ h1, p, ul {
   list-style: none;
 }
 
-h1 {
-  font-size: var(--fs-h1);
+h1, h2 {
   font-weight: var(--fw-reg);
 }
 
 h2 {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-large);
 }
 
 h3 {
@@ -100,6 +99,15 @@ h3 {
   margin-left: 8em;
 }
 
+.section__title {
+  font-family: var(--ff-title);
+  letter-spacing: 2px;
+  color: var(--clr-light);
+  opacity: .7;
+  margin-left: 1em;
+  text-shadow: var(--bs-light);
+}
+
 /* Body Styling */
 
 .main {
@@ -111,6 +119,10 @@ h3 {
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+
+.section {
+
 }
 
   /* Navigation */
@@ -145,12 +157,7 @@ h3 {
 .nav__hamburger {
   display: block;
   position: relative;
-}
-
-.nav__hamburger:hover,
-.nav__hamburger:hover::before,
-.nav__hamburger:hover::after {
-  background: var(--clr-acc-light);
+  opacity: .7;
 }
 
 .nav__hamburger,
@@ -161,6 +168,13 @@ h3 {
   height: 2px;
   border-radius: 1em;
   transition: transform 250ms ease-in-out;
+  opacity: .7;
+}
+
+.nav__hamburger:hover,
+.nav__hamburger:hover::before,
+.nav__hamburger:hover::after {
+  background: var(--clr-acc-light);
 }
  
 .nav__hamburger::before,
@@ -221,11 +235,13 @@ h3 {
 
 .nav__item {
   font-weight: var(--fw-light);
+  opacity: .8;
 }
 
 .nav__social-list {
   margin-left: 0;
   transition: margin-left .5s;
+  opacity: .8;
 }
 
 .nav__item-link {
