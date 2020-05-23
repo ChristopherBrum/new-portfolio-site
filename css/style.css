@@ -9,14 +9,13 @@ body {
   background:
   linear-gradient(
     to top left, 
-    var(--clr-acc-orange1), var(--clr-acc-orange2)
+    var(--clr-acc-dark), var(--clr-acc-light)
   );
 }
 
 :root {
---clr-acc-orange1: #F78764;
---clr-acc-orange2: #FCB07E;
---clr-acc-dark: #093A3E;
+--clr-acc-light: #F2AF29;
+--clr-acc-dark: #AD343E;
 --clr-light: #EBF5DF;
 --clr-dark: #1C1C1C;
 
@@ -85,6 +84,7 @@ h3 {
   margin-left: -.25em;
   color: var(--clr-light);
   font-family: var(--ff-title);
+  opacity: .7;
 }
 
 .intro__title-first {
@@ -108,7 +108,6 @@ h3 {
 }
 
 .intro {
-  color: var(--clr-light);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -148,6 +147,12 @@ h3 {
   position: relative;
 }
 
+.nav__hamburger:hover,
+.nav__hamburger:hover::before,
+.nav__hamburger:hover::after {
+  background: var(--clr-acc-light);
+}
+
 .nav__hamburger,
 .nav__hamburger::before,
 .nav__hamburger::after {
@@ -157,7 +162,7 @@ h3 {
   border-radius: 1em;
   transition: transform 250ms ease-in-out;
 }
-
+ 
 .nav__hamburger::before,
 .nav__hamburger::after {
   content: '';
@@ -230,7 +235,7 @@ h3 {
 
 .nav__item-link:hover,
 .nav__item-link:focus {
-  color: var(--clr-acc-orange2);
+  color: var(--clr-acc-light);
 }
 
 .nav__social-link {
@@ -244,7 +249,7 @@ h3 {
 
 .nav__social-link:hover,
 .nav__social-link:focus {
-  color: var(--clr-acc-orange2);
+  color: var(--clr-acc-light);
   opacity: .75;
 }
 
@@ -285,4 +290,8 @@ h3 {
 
 .nav__social-list--toggle {
   margin-left: -9px;
+}
+
+@media (max-width: 875px) {
+
 }
