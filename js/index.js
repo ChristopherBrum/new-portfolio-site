@@ -5,6 +5,7 @@ const closeNav = () => {
   const menuToggle = document.querySelectorAll('.nav__list')[0];
   const headshotToggle = document.querySelectorAll('.nav__headshot')[0]; 
   const socialToggle = document.querySelectorAll('.nav__social-list')[0];
+  const socialLinkToggle = document.querySelectorAll('.nav__social-link')[0];
 
   navToggle.classList.toggle('nav--toggle');
   navBtnToggle.classList.toggle('nav__btn--toggle');
@@ -12,6 +13,8 @@ const closeNav = () => {
   menuToggle.classList.toggle('nav__list--toggle');
   headshotToggle.classList.toggle('nav__headshot--toggle');
   socialToggle.classList.toggle('nav__social-list--toggle');
+  socialLinkToggle.classList.toggle('nav__social-link--toggle');
+
 }
 
 const navToggle = document.querySelector('.nav__btn');

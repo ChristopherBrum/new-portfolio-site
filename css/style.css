@@ -282,6 +282,7 @@ h3 {
 
 .nav--toggle {
   width: 50px;
+  background: transparent;
 }
 
 .nav__btn--toggle {
@@ -306,6 +307,10 @@ h3 {
 
 .nav__social-list--toggle {
   margin-left: -9px;
+}
+
+.nav__social-link--toggle {
+  color: var(--clr-dark);
 }
 
 @media (max-width: 875px) {
