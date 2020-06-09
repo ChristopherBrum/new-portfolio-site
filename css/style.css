@@ -108,23 +108,6 @@ h3 {
   text-shadow: var(--bs-light);
 }
 
-/* Body Styling */
-
-.main {
-  transition: margin-left .5s;
-  margin-left: 275px;
-}
-
-.intro {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-
-.section {
-
-}
-
   /* Navigation */
 
 .nav {
@@ -314,5 +297,35 @@ h3 {
 }
 
 @media (max-width: 875px) {
+
+}
+
+/* Body Styling */
+
+.main {
+  transition: margin-left .5s;
+  margin-left: 275px;
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  z-index: -1;
+  top: -100%;
+  right: auto;
+  left: auto;
+  background: #F2AF29;
+  transform: rotate(45deg);
+  border-radius: 5px;
+}
+
+.section {
 
 }
